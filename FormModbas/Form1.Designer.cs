@@ -45,6 +45,8 @@ namespace FormModbas
             this.cb_col_3 = new System.Windows.Forms.CheckBox();
             this.cb_col_4 = new System.Windows.Forms.CheckBox();
             this.cb_col_5 = new System.Windows.Forms.CheckBox();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.trackBar1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -88,9 +90,9 @@ namespace FormModbas
             this.label2.AutoSize = true;
             this.label2.Location = new System.Drawing.Point(31, 39);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(91, 17);
+            this.label2.Size = new System.Drawing.Size(191, 17);
             this.label2.TabIndex = 5;
-            this.label2.Text = "Progress Bar";
+            this.label2.Text = "Progress Bar (Read Holding)";
             // 
             // progressBar1
             // 
@@ -104,9 +106,9 @@ namespace FormModbas
             this.lbl_connect_status.AutoSize = true;
             this.lbl_connect_status.Location = new System.Drawing.Point(448, 365);
             this.lbl_connect_status.Name = "lbl_connect_status";
-            this.lbl_connect_status.Size = new System.Drawing.Size(123, 17);
+            this.lbl_connect_status.Size = new System.Drawing.Size(16, 17);
             this.lbl_connect_status.TabIndex = 7;
-            this.lbl_connect_status.Text = "Connection Status";
+            this.lbl_connect_status.Text = "0";
             // 
             // btn_disconnect
             // 
@@ -135,9 +137,9 @@ namespace FormModbas
             this.cb_col_1.AutoSize = true;
             this.cb_col_1.Location = new System.Drawing.Point(448, 184);
             this.cb_col_1.Name = "cb_col_1";
-            this.cb_col_1.Size = new System.Drawing.Size(62, 21);
+            this.cb_col_1.Size = new System.Drawing.Size(144, 21);
             this.cb_col_1.TabIndex = 10;
-            this.cb_col_1.Text = "Col 1";
+            this.cb_col_1.Text = "Col 1 (Read Coils)";
             this.cb_col_1.UseVisualStyleBackColor = true;
             // 
             // cb_col_2
@@ -145,9 +147,9 @@ namespace FormModbas
             this.cb_col_2.AutoSize = true;
             this.cb_col_2.Location = new System.Drawing.Point(448, 211);
             this.cb_col_2.Name = "cb_col_2";
-            this.cb_col_2.Size = new System.Drawing.Size(62, 21);
+            this.cb_col_2.Size = new System.Drawing.Size(137, 21);
             this.cb_col_2.TabIndex = 11;
-            this.cb_col_2.Text = "Col 2";
+            this.cb_col_2.Text = "Col 2 (Read Coil)";
             this.cb_col_2.UseVisualStyleBackColor = true;
             // 
             // cb_col_3
@@ -155,9 +157,9 @@ namespace FormModbas
             this.cb_col_3.AutoSize = true;
             this.cb_col_3.Location = new System.Drawing.Point(448, 239);
             this.cb_col_3.Name = "cb_col_3";
-            this.cb_col_3.Size = new System.Drawing.Size(62, 21);
+            this.cb_col_3.Size = new System.Drawing.Size(188, 21);
             this.cb_col_3.TabIndex = 12;
-            this.cb_col_3.Text = "Col 3";
+            this.cb_col_3.Text = "Col 3 (Read Digital Input)";
             this.cb_col_3.UseVisualStyleBackColor = true;
             // 
             // cb_col_4
@@ -165,9 +167,9 @@ namespace FormModbas
             this.cb_col_4.AutoSize = true;
             this.cb_col_4.Location = new System.Drawing.Point(448, 267);
             this.cb_col_4.Name = "cb_col_4";
-            this.cb_col_4.Size = new System.Drawing.Size(62, 21);
+            this.cb_col_4.Size = new System.Drawing.Size(136, 21);
             this.cb_col_4.TabIndex = 13;
-            this.cb_col_4.Text = "Col 4";
+            this.cb_col_4.Text = "Col 4 (Write Coil)";
             this.cb_col_4.UseVisualStyleBackColor = true;
             this.cb_col_4.CheckedChanged += new System.EventHandler(this.cb_col_4_CheckedChanged);
             // 
@@ -176,17 +178,37 @@ namespace FormModbas
             this.cb_col_5.AutoSize = true;
             this.cb_col_5.Location = new System.Drawing.Point(448, 295);
             this.cb_col_5.Name = "cb_col_5";
-            this.cb_col_5.Size = new System.Drawing.Size(62, 21);
+            this.cb_col_5.Size = new System.Drawing.Size(136, 21);
             this.cb_col_5.TabIndex = 14;
-            this.cb_col_5.Text = "Col 5";
+            this.cb_col_5.Text = "Col 5 (Write Coil)";
             this.cb_col_5.UseVisualStyleBackColor = true;
             this.cb_col_5.CheckedChanged += new System.EventHandler(this.cb_col_5_CheckedChanged);
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(34, 318);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(154, 17);
+            this.label3.TabIndex = 15;
+            this.label3.Text = "Write Holding Register:";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(448, 341);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(163, 17);
+            this.label4.TabIndex = 16;
+            this.label4.Text = "Read Analogue Register";
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.label4);
+            this.Controls.Add(this.label3);
             this.Controls.Add(this.cb_col_5);
             this.Controls.Add(this.cb_col_4);
             this.Controls.Add(this.cb_col_3);
@@ -226,6 +248,8 @@ namespace FormModbas
         private System.Windows.Forms.CheckBox cb_col_3;
         private System.Windows.Forms.CheckBox cb_col_4;
         private System.Windows.Forms.CheckBox cb_col_5;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label label4;
     }
 }
 

@@ -60,7 +60,10 @@ namespace FormModbas
             //Checking the write senteces
             cb_col_1.Checked = readCoils[0];
             cb_col_2.Checked = readCoils[1];
-            cb_col_3.Checked = readCoils[2];
+
+            cb_col_3.Checked = (modbusClient.ReadDiscreteInputs(0,1)[0]); //Dates from DigitalInputs
+            lbl_connect_status.Text = modbusClient.ReadInputRegisters(0, 1)[0].ToString();
+
             tmr_modbus.Enabled = true;
         }
 
